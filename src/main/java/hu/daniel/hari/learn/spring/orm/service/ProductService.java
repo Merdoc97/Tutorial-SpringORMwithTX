@@ -39,6 +39,11 @@ public class ProductService {
 	}
 
 	@Transactional(readOnly = true)
+	public List<Coffe>getWithJoin(){
+		return productDao.getWithJoin();
+	}
+
+	@Transactional(readOnly = true)
 	public List<Product> listAll() {
 		return productDao.findAll();
 

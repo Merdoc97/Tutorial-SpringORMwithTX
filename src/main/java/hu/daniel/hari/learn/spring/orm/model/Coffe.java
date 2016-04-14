@@ -20,6 +20,9 @@ public class Coffe {
     @JoinColumn(name = "product_id",referencedColumnName = "id")
     private Product product;
 
+    @Column(name = "product_id",insertable = false,updatable = false)
+    private int product_id;
+
     public Coffe(Product product, String name) {
         this.product = product;
         this.name = name;

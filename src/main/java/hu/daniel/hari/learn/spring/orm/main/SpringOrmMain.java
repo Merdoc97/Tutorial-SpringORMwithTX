@@ -28,6 +28,8 @@ public class SpringOrmMain {
 		productService.persistCoffe(new Coffe(product,"milkCoffe"));
 		List<Coffe>coffeList=productService.getCoffe();
 		System.out.println(coffeList);
+		List<Coffe>withJoin=productService.getWithJoin();
+		System.out.println(withJoin);
 		System.out.println("listAll: " + productService.listAll());
 		
 		//Test transaction rollback (duplicated key)

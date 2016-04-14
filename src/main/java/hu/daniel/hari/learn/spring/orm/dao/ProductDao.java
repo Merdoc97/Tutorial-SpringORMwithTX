@@ -24,7 +24,7 @@ public class ProductDao  {
 	public List<Product> findAll() {
 		return em.createQuery("select p from Product p").getResultList();
 	}
-
+	public List<Coffe> getWithJoin(){return em.createQuery("select c from Coffe c join fetch c.product").getResultList();}
 	public List<Coffe>getCoffe(){return em.createQuery("select c from Coffe c").getResultList();}
 
 }
